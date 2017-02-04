@@ -1,0 +1,55 @@
+extends layout
+
+mixin chatEntry(text)
+    .card.horizontal.grey.darken-3.z-depth-2
+        .card-stacked
+            .card-content
+                .white-text
+                    blockquote: p.truncate= text
+
+block content
+    nav#nav.navbar-fixed
+        .container.nav-wrapper
+            a.brand-logo.page-scroll(href='#page-top') Gnar
+            a.button-collapse(href="#" data-activates="mobilebar")
+                i.material-icons menu
+            ul.right.hide-on-med-and-down
+                li: a.page-scroll(href='#about') About
+                li: a.page-scroll(href='#features') Features
+                li.super-item: a.page-scroll(href='#get') Get Gnar
+    ul#mobilebar.side-nav
+        li: a.page-scroll(href='#about') About
+        li: a.page-scroll(href='#features') Features
+        li.super-item: a.page-scroll(href='#get') Get Gnar
+
+    .hero
+        .container
+            .row.valign-wrapper.no-valign-wrap-on-mobile
+                .col.s12.l3
+                    .card-panel.header-content
+                        center: img.z-depth-5.main-icon.responsive-img.circle(src='img/logo.jpg')
+                        h1.truncate GNAR
+                        h2 The Serious yet Sarcastic
+                .col.m12.l9
+                    include discord-mockup/mockup
+
+    //section.primary
+    //    .container
+    //        .row
+    //            .col.s12.center-align
+    //                h1 Lul
+    //                h2 eyooo
+    //        .row
+    //            .col.l3.m6.s12: .card.small
+    //                .card-content
+    //                    p Hello there
+    //            .col.l3.m6.s12: .card.small
+    //                .card-content
+    //                    p Hello there
+    //            .col.l3.m6.s12: .card.small
+    //                .card-content
+    //                    p Hello there
+    //            .col.l3.m6.s12: .card.small
+    //                .card-content
+    //                    p Hello there
+    //

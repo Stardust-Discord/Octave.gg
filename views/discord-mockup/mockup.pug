@@ -1,0 +1,28 @@
+.discord-mockup.z-depth-3
+    .items-panel
+        .actions
+            .close
+            .minimize
+            .zoom
+        .items
+            .item
+                a(href='#'): img.responsive-img(src='http://gnarbot.xyz/img/profile.jpg')
+            .item
+                button.guild-add +
+    .sidebar-panel
+        .header Demonstration
+        .items
+            a(href="#"): .item.trigger-group(data='default')
+                | help
+            a(href="#"): .item.trigger-group(data='general')
+                | general
+            a(href="#"): .item.trigger-group(data='searching')
+                | searching online
+            a(href="#"): .item.trigger-group(data='overwatch')
+                | overwatch
+
+    .messages-panel
+        include msg-groups/default
+        include msg-groups/general
+        include msg-groups/searching
+        include msg-groups/overwatch

@@ -1,49 +1,35 @@
 #searching.messages-group
     .header General Commands
     .messages
-        .message
-            .icon: img.responsive-img(src='img/avarel.jpg')
-            .body
-                .user-name Avalon
-                .content _google discord
-        .message
-            .icon: img.responsive-img(src='img/logo.jpg')
-            .body
-                .user-name Gnar
-                .embed-wrapper
-                    .color-pill
-                    .content-inner
-                        .description
-                            .title Google Results
-                            p: b: a Discord - Free Voice and Text Chat for Gamers
-                            p Step up your game with a modern voice & text chat app. Crystal clear voice, multiple server and channel support, mobile apps, and more. Get your free server  ...
-                            br
-                            p: b: a Discord - Chat for Gamers - Android Apps on Google Play
-                            p Teen. Discord is the only cross-platform voice and text chat app designed specifically for gamers.
-                            br
-                            p: b: a Discord - Chat for Gamers on the App Store - iTunes - Apple
-                            p Dec 22, 2016 ... Discord is the only cross-platform voice and text chat app designed specifically for gamers.
-                        img.thumb(src='img/google.jpg')
-        .message
-            .icon: img.responsive-img(src='img/avarel.jpg')
-            .body
-                .user-name Avalon
-                .content _google discord
-        .message
-            .icon: img.responsive-img(src='img/logo.jpg')
-            .body
-                .user-name Gnar
-                .embed-wrapper
-                    .color-pill
-                    .content-inner
-                        .description
-                            .title YouTube Results
-                            p: b: a FILTHY FRANK VS CHIN CHIN
-                            p CHIN CHIN VS FRANK. WHO IS THE LORD OF CHROMOSOMES? TWITTER: https://twitter.com/FilthyFrank FACEBOOK: ...
-                            br
-                            p: b: a THE FILTHY FRANK SHOW 2017
-                            p KICKING OFF 2017 WITH PINK SEASON TWITTER: https://twitter.com/FilthyFrank FACEBOOK: ...
-                            br
-                            p: b: a PIMP MY WHEELCHAIR
-                            p A touching story about a man with cerebral palsy who finally gets some good chach. TITLE SEQUENCE: ...
-                        img.thumb(src='img/youtube.png')
+        +msg('assets/img/avarel.jpg', 'Avalon', '_google discord')
+        +msg('assets/img/logo.jpg', 'Gnar')
+            .embed-wrapper
+                .color-pill
+                .content-inner
+                    .description
+                        .title Google Results
+                        p: b: a Discord - Free Voice and Text Chat for Gamers
+                        p Step up your game with a modern voice & text chat app. Crystal clear voice, multiple server and channel support, mobile apps, and more. Get your free server  ...
+                        br
+                        p: b: a Discord - Chat for Gamers - Android Apps on Google Play
+                        p Teen. Discord is the only cross-platform voice and text chat app designed specifically for gamers.
+                        br
+                        p: b: a Discord - Chat for Gamers on the App Store - iTunes - Apple
+                        p Dec 22, 2016 ... Discord is the only cross-platform voice and text chat app designed specifically for gamers.
+                    img.thumb(src='assets/img/google.jpg')
+        +msg('assets/img/avarel.jpg', 'Avalon', '_google filthy frank')
+        +msg('assets/img/logo.jpg', 'Gnar')
+            .embed-wrapper
+                .color-pill
+                .content-inner
+                    .description
+                        .title YouTube Results
+                        p: b: a FILTHY FRANK VS CHIN CHIN
+                        p CHIN CHIN VS FRANK. WHO IS THE LORD OF CHROMOSOMES? TWITTER: https://twitter.com/FilthyFrank FACEBOOK: ...
+                        br
+                        p: b: a THE FILTHY FRANK SHOW 2017
+                        p KICKING OFF 2017 WITH PINK SEASON TWITTER: https://twitter.com/FilthyFrank FACEBOOK: ...
+                        br
+                        p: b: a PIMP MY WHEELCHAIR
+                        p A touching story about a man with cerebral palsy who finally gets some good chach. TITLE SEQUENCE: ...
+                    img.thumb(src='assets/img/youtube.png')

@@ -1,0 +1,11 @@
+mixin msg(icon, name, msg)
+    .message
+        .icon: img.responsive-img(src=icon)
+        .body
+            .user-name= name
+            if msg
+                .content= msg
+            else if block
+                block
+            else
+                .content No content provided.

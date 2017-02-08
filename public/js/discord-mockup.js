@@ -1,31 +1,28 @@
-(function($) {
-    "use strict"; // Start of use strict
-    
-    var defaultId = 'default';
+"use strict";
 
-    function showGroup(id) {
+let defaultId = 'default';
 
-        if (typeof id == 'undefined') {
-            showGroup(defaultId);
-            return;
-        }
+function showGroup(id) {
 
-        $('.messages-group').each(function() {
-            if ($(this).attr('id') === id) {
-                $(this).addClass('show');
-            } else {
-                $(this).removeClass('show');
-            }
-        });
-    };
-
-    $(document).ready(function() {
+    if (typeof id == 'undefined') {
         showGroup(defaultId);
-    });
+        return;
+    }
 
-    $('.trigger-group').click(function() {
-        console.log($(this).attr('data-id'));
-        var id = $(this).attr('data');
-        showGroup(id);
+    $('.messages-group').each(function() {
+        if ($(this).attr('id') === id) {
+            $(this).addClass('show');
+        } else {
+            $(this).removeClass('show');
+        }
     });
-})(jQuery); // End of use strict
+}
+
+$(document).ready(() => {
+    showGroup(defaultId);
+});
+
+$('.trigger-group').click(function() {
+    let id = $(this).attr('data');
+    showGroup(id);
+});

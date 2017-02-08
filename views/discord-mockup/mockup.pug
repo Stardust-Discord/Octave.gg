@@ -1,3 +1,5 @@
+include mixins
+
 .discord-mockup.z-depth-3
     .items-panel
         .actions
@@ -17,9 +19,11 @@
             a(href="#"): .item.trigger-group(data='general')
                 | general
             a(href="#"): .item.trigger-group(data='searching')
-                | searching online
+                | searching
             a(href="#"): .item.trigger-group(data='overwatch')
                 | overwatch
+            a(href="#"): .item
+                | ... more docs soon!
 
     .messages-panel
         include msg-groups/default

@@ -1,111 +1,105 @@
-include ../mixins
-
 mixin cmd(s)
-    p: a= "_" + s
+    p: a= '_' + s
 
 mixin musicCmd(s)
     p
         b ♬&nbsp;
-        a= "_" + s
+        a= '_' + s
 
 #default.messages-group
     .header Help and Documentation
     .messages
         +msg('assets/img/avarel.jpg', 'Avalon', '_help')
-
         +msg('assets/img/logo.jpg', 'Gnar')
-            .embed-wrapper
-                .color-pill
-                .content-inner
-                    .description
-                        .title Gnar Documentation
-                        p This is all of GN4R-Bot's currently registered commands on the your guild.
+            +embed-desc
+                .title Gnar Documentation
+                p This is all of GN4R-Bot's currently registered commands on the your guild.
 
-                        .fields
-                            b: u Bot Commander 5
-                        .fields
-                            .field-inline
-                                +cmd("ban")
-                                +cmd("kick")
-                            .field-inline
-                                +cmd("unban")
-                                +cmd("prune")
-                            .field-inline
-                                +cmd("deletemsg")
+                .fields
+                    b: u Bot Commander 5
+                .fields
+                    .field-inline
+                        +cmd("ban")
+                        +cmd("kick")
+                    .field-inline
+                        +cmd("unban")
+                        +cmd("prune")
+                    .field-inline
+                        +cmd("deletemsg")
 
 
-                        .fields
-                            b: u DJ 7
-                        .fields
-                            .field-inline
-                                +musicCmd("leave")
-                                +musicCmd("pause")
-                                +musicCmd("stop")
-                            .field-inline
-                                +musicCmd("skip")
-                                +musicCmd("restart")
-                                +musicCmd("repeat")
-                            .field-inline
-                                +musicCmd("reset")
+                .fields
+                    b: u DJ 7
+                .fields
+                    .field-inline
+                        +musicCmd("leave")
+                        +musicCmd("pause")
+                        +musicCmd("stop")
+                    .field-inline
+                        +musicCmd("skip")
+                        +musicCmd("restart")
+                        +musicCmd("repeat")
+                    .field-inline
+                        +musicCmd("reset")
 
-                        .fields
-                            b: u User 46
-                        .fields
-                            .field-inline
-                                +cmd("help")
-                                +cmd("invite")
-                                +cmd("ping")
-                                +cmd("math")
-                                +cmd("remindme")
-                                +cmd("google")
-                                +cmd("youtube")
-                                +cmd("uptime")
-                                +cmd("whois")
-                                +cmd("info")
-                                +cmd("ascii")
-                                +cmd("coinflip")
-                                +cmd("dialog")
-                                +cmd("yodatalk")
-                                +cmd("roll")
-                                +cmd("poop")
-                            .field-inline
-                                +cmd("goodshit")
-                                +cmd("8ball")
-                                +cmd("leet")
-                                +cmd("marvel")
-                                +cmd("shared")
-                                +cmd("tts")
-                                +cmd("react")
-                                +cmd("champdata")
-                                +cmd("answer")
-                                +cmd("trivia")
-                                +cmd("ub")
-                                +cmd("q")
-                                +cmd("cbot")
-                                +cmd("pbot")
-                                +cmd("meme")
-                                +cmd("adventure")
-                            .field-inline
-                                +cmd("startadventure")
-                                +cmd("overwatch")
-                                +cmd("league")
-                                +cmd("game")
-                                +cmd("cats")
-                                +cmd("c&h")
-                                +cmd("rcg")
-                                +cmd("xkcd")
-                                +cmd("quote")
-                                +cmd("ttb")
-                                +musicCmd("join")
-                                +musicCmd("play")
-                                +musicCmd("nowPlaying")
-                                +musicCmd("queue")
+                .fields
+                    b: u User 46
+                .fields
+                    .field-inline
+                        +cmd("help")
+                        +cmd("invite")
+                        +cmd("ping")
+                        +cmd("math")
+                        +cmd("remindme")
+                        +cmd("google")
+                        +cmd("youtube")
+                        +cmd("uptime")
+                        +cmd("whois")
+                        +cmd("info")
+                        +cmd("ascii")
+                        +cmd("coinflip")
+                        +cmd("dialog")
+                        +cmd("yodatalk")
+                        +cmd("roll")
+                        +cmd("poop")
+                    .field-inline
+                        +cmd("goodshit")
+                        +cmd("8ball")
+                        +cmd("leet")
+                        +cmd("marvel")
+                        +cmd("shared")
+                        +cmd("tts")
+                        +cmd("react")
+                        +cmd("champdata")
+                        +cmd("answer")
+                        +cmd("trivia")
+                        +cmd("ub")
+                        +cmd("q")
+                        +cmd("cbot")
+                        +cmd("pbot")
+                        +cmd("meme")
+                        +cmd("adventure")
+                    .field-inline
+                        +cmd("startadventure")
+                        +cmd("overwatch")
+                        +cmd("league")
+                        +cmd("game")
+                        +cmd("cats")
+                        +cmd("c&h")
+                        +cmd("rcg")
+                        +cmd("xkcd")
+                        +cmd("quote")
+                        +cmd("ttb")
+                        +musicCmd("join")
+                        +musicCmd("play")
+                        +musicCmd("nowPlaying")
+                        +musicCmd("queue")
 
-                        br
-                        p To view a command's description, do _help [command].
-                        br
-                        p <b>DJ</b> commands requires a role named exactly <a>DJ</a>.
-                        p <b>Bot Commander</b> commands requires a role named exactly <a>Bot Commander</a>.
-                        p <b>Server Owner</b> commands requires you to be the <a>server owner</a> to execute.
+                br
+                p To view a command's description, do _help [command].
+                br
+                p <b>DJ</b> commands requires a role named exactly <a>DJ</a>.
+                p <b>Bot Commander</b> commands requires a role named exactly <a>Bot Commander</a>.
+                p <b>Server Owner</b> commands requires you to be the <a>server owner</a> to execute.
 
 

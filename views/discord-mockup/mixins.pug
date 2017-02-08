@@ -9,3 +9,16 @@ mixin msg(icon, name, msg)
                 block
             else
                 .content No content provided.
+
+mixin embed-content
+    .embed-wrapper
+        .color-pill
+        .content-inner
+            block
+
+mixin embed-desc
+    .embed-wrapper
+        .color-pill
+        .content-inner
+            .description
+                block

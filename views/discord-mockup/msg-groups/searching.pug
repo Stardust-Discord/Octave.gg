@@ -1,35 +1,47 @@
 #searching.messages-group
-    .header General Commands
+    .header Search Online
     .messages
         +msg('assets/img/avarel.jpg', 'Avalon', '_google discord')
         +msg('assets/img/logo.jpg', 'Gnar')
-            .embed-wrapper
-                .color-pill
-                .content-inner
-                    .description
-                        .title Google Results
-                        p: b: a Discord - Free Voice and Text Chat for Gamers
-                        p Step up your game with a modern voice & text chat app. Crystal clear voice, multiple server and channel support, mobile apps, and more. Get your free server  ...
-                        br
-                        p: b: a Discord - Chat for Gamers - Android Apps on Google Play
-                        p Teen. Discord is the only cross-platform voice and text chat app designed specifically for gamers.
-                        br
-                        p: b: a Discord - Chat for Gamers on the App Store - iTunes - Apple
-                        p Dec 22, 2016 ... Discord is the only cross-platform voice and text chat app designed specifically for gamers.
-                    img.thumb(src='assets/img/google.jpg')
-        +msg('assets/img/avarel.jpg', 'Avalon', '_google filthy frank')
+            +embed-content
+                .description
+                    .title Google Results
+                    p: b: a Discord - Free Voice and Text Chat for Gamers
+                    p Step up your game with a modern voice & text chat app. Crystal clear voice, multiple server and channel support, mobile apps, and more. Get your free server  ...
+                    br
+                    p: b: a Discord - Chat for Gamers - Android Apps on Google Play
+                    p Teen. Discord is the only cross-platform voice and text chat app designed specifically for gamers.
+                    br
+                    p: b: a Discord - Chat for Gamers on the App Store - iTunes - Apple
+                    p Dec 22, 2016 ... Discord is the only cross-platform voice and text chat app designed specifically for gamers.
+                img.thumb(src='assets/img/google.jpg')
+        +msg('assets/img/avarel.jpg', 'Avalon', '_youtube filthy frank')
         +msg('assets/img/logo.jpg', 'Gnar')
-            .embed-wrapper
-                .color-pill
-                .content-inner
-                    .description
-                        .title YouTube Results
-                        p: b: a FILTHY FRANK VS CHIN CHIN
-                        p CHIN CHIN VS FRANK. WHO IS THE LORD OF CHROMOSOMES? TWITTER: https://twitter.com/FilthyFrank FACEBOOK: ...
-                        br
-                        p: b: a THE FILTHY FRANK SHOW 2017
-                        p KICKING OFF 2017 WITH PINK SEASON TWITTER: https://twitter.com/FilthyFrank FACEBOOK: ...
-                        br
-                        p: b: a PIMP MY WHEELCHAIR
-                        p A touching story about a man with cerebral palsy who finally gets some good chach. TITLE SEQUENCE: ...
-                    img.thumb(src='assets/img/youtube.png')
+            +embed-content
+                .description
+                    .title YouTube Results
+                    p: b: a FILTHY FRANK VS CHIN CHIN
+                    p CHIN CHIN VS FRANK. WHO IS THE LORD OF CHROMOSOMES? TWITTER: https://twitter.com/FilthyFrank FACEBOOK: ...
+                    br
+                    p: b: a THE FILTHY FRANK SHOW 2017
+                    p KICKING OFF 2017 WITH PINK SEASON TWITTER: https://twitter.com/FilthyFrank FACEBOOK: ...
+                    br
+                    p: b: a PIMP MY WHEELCHAIR
+                    p A touching story about a man with cerebral palsy who finally gets some good chach. TITLE SEQUENCE: ...
+                img.thumb(src='assets/img/youtube.png')
+        +msg('assets/img/avarel.jpg', 'Avalon', '_ub bot')
+            +msg('assets/img/logo.jpg', 'Gnar')
+                +embed-desc
+                    .title Urban Dictionary
+                    p Word: <a>bot</a>
+                    br
+                    br
+                    p Definition:
+                    p: a 1. Simple computer program used to perform highly repetitive operations, e.g. trawling websites to collect email addresses.
+                    br
+                    p: a 2. Computer program run concurrently with an online game to give the player an unfair advantage. Bots may alter the game environment, boost the abilities of the player's character or hinder opponents. Writing bots requires a great deal of skill; using them almost none.
+                    br
+                    br
+                    p Example:
+                    p: a "So you're using an aimbot... and he's using an aimbot... if you're both going to cheat, why bother to play?"
+                    p: a "Just to show that I cheat better than him."

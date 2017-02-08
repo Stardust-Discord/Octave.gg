@@ -8,7 +8,6 @@ let bodyParser = require('body-parser');
 let sass = require('node-sass-middleware');
 
 let index = require('./routes/index');
-//let users = require('./routes/users');
 
 let app = express();
 

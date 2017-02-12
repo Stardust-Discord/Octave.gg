@@ -1,26 +1,22 @@
 extends layout
 
-mixin chatEntry(text)
-    .card.horizontal.grey.darken-3.z-depth-2
-        .card-stacked
-            .card-content
-                .white-text
-                    blockquote: p.truncate= text
+
+mixin nav-items
+    li: a.page-scroll(href='https://github.com/Gnar-Team/Gnar') GitHub
+    li.super-item: a.page-scroll(href='https://discordapp.com/oauth2/authorize?client_id=201492375653056512&scope=bot&permissions=8') Get Gnar
 
 block content
+
     nav#nav.navbar-fixed
         .container.nav-wrapper
             a.brand-logo.page-scroll(href='#page-top') Gnar
             a.button-collapse(href="#" data-activates="mobilebar")
                 i.material-icons menu
             ul.right.hide-on-med-and-down
-                li: a.page-scroll(href='#about') About
-                li: a.page-scroll(href='#features') Features
-                li.super-item: a.page-scroll(href='#get') Get Gnar
+                +nav-items
+
     ul#mobilebar.side-nav
-        li: a.page-scroll(href='#about') About
-        li: a.page-scroll(href='#features') Features
-        li.super-item: a.page-scroll(href='#get') Get Gnar
+        +nav-items
 
     .hero
         .container
@@ -28,7 +24,7 @@ block content
                 .col.s12.l3
                     .card-panel.header-content
                         center: img.z-depth-5.main-icon.responsive-img.circle(src='assets/img/logo.jpg')
-                        h1.truncate GNAR
+                        h1 GNAR
                         h2= splash_text
                 .col.m12.l9
                     include discord-mockup/mockup

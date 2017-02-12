@@ -175,32 +175,30 @@ nav {
     max-width: 90% !important;
   }
 
-  padding: 150px 0 150px;
+  padding-top: 70px;
+  padding-bottom: 150px;
+
+  @media #{$large-and-up} {
+    padding-top: 150px;
+  }
 
   .header-content {
     color: $primary-dark;
 
     h1 {
       @include heading-font;
-      letter-spacing: 10px;
+      letter-spacing: 5px;
       font-size: 40px;
-
-      @media #{$medium-and-up} {
-        font-size: 45px;
-      }
 
       @media #{$large-and-up} {
         font-size: 50px;
+        letter-spacing: 10px;
       }
     }
 
     h2 {
       @include body-font;
       font-size: 25px;
-
-      @media #{$medium-and-up} {
-        font-size: 32px;
-      }
 
       @media #{$large-and-up} {
         font-size: 35px;

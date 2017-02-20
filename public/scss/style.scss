@@ -166,9 +166,7 @@ nav {
   overflow-y: hidden;
   background: url('../assets/img/bg-tile.png'), linear-gradient(to bottom, $primary-primed, $primary-dark);
 
-  @media #{$large-and-up} {
-    height: 100%;
-  }
+  min-height: 100%;
 
   .container {
     width: 90%;

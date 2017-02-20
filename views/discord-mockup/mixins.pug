@@ -10,15 +10,16 @@ mixin msg(icon, name, msg)
             else
                 .content No content provided.
 
-mixin embed-content
+mixin embed-content(color)
     .embed-wrapper
-        .color-pill
+        if color
+            .color-pill(style='background-color: ' + color)
+        else
+            .color-pill
         .content-inner
             block
 
-mixin embed-desc
-    .embed-wrapper
-        .color-pill
-        .content-inner
-            .description
-                block
+mixin embed-desc(color)
+    +embed-content(color)
+        .description
+            block

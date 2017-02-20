@@ -10,7 +10,7 @@ include mixins
             .item
                 img.responsive-img(src='assets/img/logo.jpg')
             .item
-                button.guild-add +
+                a(href='/invite'): button.guild-add +
     .sidebar-panel
         .header Demonstration
         .items
@@ -22,6 +22,8 @@ include mixins
                 | searching
             .item.trigger-group(data='overwatch')
                 | overwatch
+            .item.trigger-group(data='music')
+                | music
             .item
                 | ... more docs soon!
 
@@ -30,3 +32,4 @@ include mixins
         include msg-groups/general
         include msg-groups/searching
         include msg-groups/overwatch
+        include msg-groups/music

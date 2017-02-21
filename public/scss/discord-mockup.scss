@@ -308,10 +308,13 @@ $body-padding: 20px;
                 display: flex;
 
                 .description {
+                  $field-padding: 15px;
+
                   word-wrap: break-word;
                   flex: 1;
                   max-width: 500px;
                   color: hsla(0, 0%, 100%, .7);
+                  margin-bottom: -$field-padding;
 
                   font-size: 13px;
 
@@ -330,21 +333,27 @@ $body-padding: 20px;
                     display: inline-block;
                   }
 
+                  .text {
+                    padding-bottom: $field-padding;
+                  }
+
                   .fields {
                     display: flex;
                     flex-direction: row;
                     flex-wrap: wrap;
-                    padding-top: 20px;
+                    padding-bottom: $field-padding;
+
+                    .field-title {
+                      color: white;
+                      font-weight: bold;
+                    }
 
                     .field {
-                      margin-top: 6px;
                       flex: 0;
-                      padding-top: 10px;
                       min-width: 100%;
                       max-width: 506px;
                     }
                     .field-inline {
-                      margin-top: 6px;
                       flex: 1;
                       min-width: 150px;
                       max-width: 506px;

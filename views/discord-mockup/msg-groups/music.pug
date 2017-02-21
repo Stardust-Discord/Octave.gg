@@ -5,13 +5,35 @@
         +msg('assets/img/logo.jpg', 'Gnar')
             +embed-desc('#00dd58')
                 .title Music
-                p Joined channel <u>General</u>.
+                .text: p Joined channel <u>General</u>.
             +embed-desc('#00dd58')
                 .title Music
-                p Added <u>Crypt of the Necrodancer AMPLIFIED OST - Six Feet Thunder (5-3)</u> to queue.
+                .text: p Added <u>Crypt of the Necrodancer AMPLIFIED OST - Six Feet Thunder (5-3)</u> to queue.
         +msg('assets/img/avarel.jpg', 'Avalon', '_voteskip')
         +msg('assets/img/logo.jpg', 'Gnar')
             +embed-desc('#00dd58')
                 .title Music
-                p <a>Avarel</a> has voted to skip the current track! React with <b>👍</b> or <b>👎</b>!
-                p Whichever has the most votes in 30 seconds will win!
+                .text
+                    p <a>Avarel</a> has voted to skip the current track! React with <b>👍</b> or <b>👎</b>!
+                    p Whichever has the most votes in 30 seconds will win!
+        +msg('assets/img/logo.jpg', 'Gnar')
+            +embed-desc('#00dd58')
+                .title Gnar Documentation
+
+                .fields
+                    .field
+                        .field-title Now Playing
+                        p: a Crypt of the Necrodancer AMPLIFIED OST - Six Feet Thunder (5-3)
+
+                .fields
+                    .field
+                        .field-title Queue
+                        p <b>1</b> [04:01] <a>Notorious D.I.G. - Synth of the NecroDancer (mix)</a>
+
+                .fields
+                    .field-inline
+                        .field-title Entries
+                        | 1
+                    .field-inline
+                        .field-title
+                        | 04:01

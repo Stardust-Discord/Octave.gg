@@ -13,10 +13,10 @@ mixin musicCmd(s)
         +msg('assets/img/logo.jpg', 'Gnar')
             +embed-desc
                 .title Gnar Documentation
-                p This is all of GN4R-Bot's currently registered commands on the your guild.
+                .text This is all of GN4R-Bot's currently registered commands on the your guild.
 
                 .fields
-                    b: u Bot Commander 5
+                    b: u Bot Commander — 5
                 .fields
                     .field-inline
                         +cmd("ban")
@@ -29,7 +29,7 @@ mixin musicCmd(s)
 
 
                 .fields
-                    b: u DJ 7
+                    b: u DJ — 7
                 .fields
                     .field-inline
                         +musicCmd("leave")
@@ -43,7 +43,7 @@ mixin musicCmd(s)
                         +musicCmd("reset")
 
                 .fields
-                    b: u User 46
+                    b: u User — 46
                 .fields
                     .field-inline
                         +cmd("help")
@@ -95,11 +95,12 @@ mixin musicCmd(s)
                         +musicCmd("nowPlaying")
                         +musicCmd("queue")
 
-                br
-                p To view a command's description, do _help [command].
-                br
-                p <b>DJ</b> commands requires a role named exactly <a>DJ</a>.
-                p <b>Bot Commander</b> commands requires a role named exactly <a>Bot Commander</a>.
-                p <b>Server Owner</b> commands requires you to be the <a>server owner</a> to execute.
+                .fields
+                    .field
+                        p To view a command's description, do _help [command].
+                        br
+                        p <b>DJ</b> commands requires a role named exactly <a>DJ</a>.
+                        p <b>Bot Commander</b> commands requires a role named exactly <a>Bot Commander</a>.
+                        p <b>Server Owner</b> commands requires you to be the <a>server owner</a> to execute.
 
 

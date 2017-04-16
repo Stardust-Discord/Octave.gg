@@ -35,16 +35,17 @@
         +msg('assets/img/logo.jpg', 'Gnar')
             +embed-desc
                 .title Urban Dictionary
-                .text
-                    p Word: <a>bot</a>
-                    br
-                    br
-                    p Definition:
-                    p: a 1. Simple computer program used to perform highly repetitive operations, e.g. trawling websites to collect email addresses.
-                    br
-                    p: a 2. Computer program run concurrently with an online game to give the player an unfair advantage. Bots may alter the game environment, boost the abilities of the player's character or hinder opponents. Writing bots requires a great deal of skill; using them almost none.
-                    br
-                    br
-                    p Example:
-                    p: a "So you're using an aimbot... and he's using an aimbot... if you're both going to cheat, why bother to play?"
-                    p: a "Just to show that I cheat better than him."
+                .fields
+                    .field
+                        .field-title Word
+                        | bot
+                .fields
+                    .field
+                        .field-title Definition
+                        p 1. Simple computer program used to perform highly repetitive operations, e.g. trawling websites to collect email addresses.
+                        p 2. Computer program run concurrently with an online game to give the player an unfair advantage. Bots may alter the game environment, boost the abilities of the player's character or hinder opponents. Writing bots requires a great deal of skill; using them almost none.
+                .fields
+                    .field
+                        .field-title Example
+                        p "So you're using an aimbot... and he's using an aimbot... if you're both going to cheat, why bother to play?"
+                        p "Just to show that I cheat better than him."

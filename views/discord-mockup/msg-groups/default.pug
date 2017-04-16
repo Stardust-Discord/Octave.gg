@@ -1,10 +1,6 @@
 mixin cmd(s)
     p: a= '_' + s
 
-mixin musicCmd(s)
-    p
-        b ♬&nbsp;
-        a= '_' + s
 
 #default.messages-group
     .header Help and Documentation
@@ -16,34 +12,81 @@ mixin musicCmd(s)
                 .text This is all of GN4R-Bot's currently registered commands on the your guild.
 
                 .fields
-                    b: u Bot Commander — 5
+                .fields
+                    .field
+                        .field-title Moderation — 8
+                        p Commands that help with the regulating normal server tasks.
                 .fields
                     .field-inline
                         +cmd("ban")
                         +cmd("kick")
-                    .field-inline
                         +cmd("unban")
+                    .field-inline
                         +cmd("prune")
-                    .field-inline
                         +cmd("deletemsg")
-
-
-                .fields
-                    b: u DJ — 7
-                .fields
+                        +cmd("enable")
                     .field-inline
-                        +musicCmd("leave")
-                        +musicCmd("pause")
-                        +musicCmd("stop")
-                    .field-inline
-                        +musicCmd("skip")
-                        +musicCmd("restart")
-                        +musicCmd("repeat")
-                    .field-inline
-                        +musicCmd("reset")
+                        +cmd("disable")
+                        +cmd("listdisabled")
 
                 .fields
-                    b: u User — 46
+                .fields
+                    .field
+                        .field-title Music — 12
+                        p Listen to the bot's fabulous renditions of your favorite songs.
+                .fields
+                    .field-inline
+                        +cmd("play")
+                        +cmd("leave")
+                        +cmd("pause")
+                        +cmd("stop")
+                    .field-inline
+                        +cmd("skip")
+                        +cmd("shuffle")
+                        +cmd("nowplaying")
+                        +cmd("queue")
+                    .field-inline
+                        +cmd("restart")
+                        +cmd("repeat")
+                        +cmd("reset")
+                        +cmd("voteskip")
+
+                .fields
+                .fields
+                    .field
+                        .field-title Fun — 21
+                        p Everything here is memes. Dank unfiltered memes. Batteries not included.
+                .fields
+                    .field-inline
+                        +cmd("urbandict")
+                        +cmd("coinflip")
+                        +cmd("yodatalk")
+                        +cmd("roll")
+                        +cmd("poop")
+                        +cmd("goodshit")
+                        +cmd("8ball")
+                    .field-inline
+                        +cmd("leet")
+                        +cmd("marvel")
+                        +cmd("eyes")
+                        +cmd("tts")
+                        +cmd("champdata")
+                        +cmd("answer")
+                        +cmd("trivia")
+                    .field-inline
+                        +cmd("q")
+                        +cmd("pbot")
+                        +cmd("meme")
+                        +cmd("cats")
+                        +cmd("c&h")
+                        +cmd("rcg")
+                        +cmd("xkcd")
+
+                .fields
+                .fields
+                    .field
+                        .field-title General — 21
+                        p General bot commands that every lame bot has. Have fun!
                 .fields
                     .field-inline
                         +cmd("help")
@@ -53,54 +96,37 @@ mixin musicCmd(s)
                         +cmd("remindme")
                         +cmd("google")
                         +cmd("youtube")
-                        +cmd("uptime")
+                    .field-inline
+                        +cmd("ptime")
                         +cmd("whois")
                         +cmd("info")
+                        +cmd("donate")
                         +cmd("ascii")
-                        +cmd("coinflip")
                         +cmd("dialog")
-                        +cmd("yodatalk")
-                        +cmd("roll")
-                        +cmd("poop")
-                    .field-inline
-                        +cmd("goodshit")
-                        +cmd("8ball")
-                        +cmd("leet")
-                        +cmd("marvel")
-                        +cmd("shared")
-                        +cmd("tts")
                         +cmd("react")
-                        +cmd("champdata")
-                        +cmd("answer")
-                        +cmd("trivia")
-                        +cmd("ub")
-                        +cmd("q")
-                        +cmd("cbot")
-                        +cmd("pbot")
-                        +cmd("meme")
-                        +cmd("adventure")
                     .field-inline
-                        +cmd("startadventure")
+                        +cmd("adventure")
                         +cmd("overwatch")
                         +cmd("league")
                         +cmd("game")
-                        +cmd("cats")
-                        +cmd("c&h")
-                        +cmd("rcg")
-                        +cmd("xkcd")
+                        +cmd("poll")
                         +cmd("quote")
                         +cmd("ttb")
-                        +musicCmd("join")
-                        +musicCmd("play")
-                        +musicCmd("nowPlaying")
-                        +musicCmd("queue")
 
                 .fields
+                .fields
                     .field
+                        .field-title Additional Information
                         p To view a command's description, do _help [command].
-                        br
-                        p <b>DJ</b> commands requires a role named exactly <a>DJ</a>.
-                        p <b>Bot Commander</b> commands requires a role named exactly <a>Bot Commander</a>.
-                        p <b>Server Owner</b> commands requires you to be the <a>server owner</a> to execute.
+                    .field
+                        .field-title News
+                        p Check the news by using the bot on Discord.
 
-
+                    .field-inline
+                        .field-title Contact
+                        p: a Website
+                        p: a Discord Server
+                    .field-inline
+                        .field-title Donations
+                        p: a PayPal
+                        p: a Patreon

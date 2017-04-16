@@ -10,9 +10,9 @@
         event.preventDefault();
     });
 
-    $('#nav').pushpin({
-        top: 50
-    });
+    // $('#nav').pushpin({
+    //     top: 50
+    // });
 
     $(".button-collapse").sideNav({
         closeOnClick: true,

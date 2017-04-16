@@ -287,7 +287,7 @@ $body-padding: 20px;
 
             p, .content {
               color: hsla(0, 0%, 100%, .7);
-              font-size: 13px;
+              font-size: 12px;
               margin: 0;
             }
 
@@ -316,7 +316,7 @@ $body-padding: 20px;
                   color: hsla(0, 0%, 100%, .7);
                   margin-bottom: -$field-padding;
 
-                  font-size: 13px;
+                  font-size: 12px;
 
                   a {
                     color: #0096d1;
@@ -341,22 +341,25 @@ $body-padding: 20px;
                     display: flex;
                     flex-direction: row;
                     flex-wrap: wrap;
-                    padding-bottom: $field-padding;
+                    padding-top: 5px;
+                    padding-bottom: 15px;
 
                     .field-title {
-                      color: white;
-                      font-weight: bold;
+                      color: white !important;
+                      font-weight: bold !important;
                     }
 
                     .field {
                       flex: 0;
                       min-width: 100%;
                       max-width: 506px;
+                      margin-top: 5px;
                     }
                     .field-inline {
                       flex: 1;
                       min-width: 150px;
                       max-width: 506px;
+                      margin-top: 5px;
                       flex-basis: auto;
                     }
                   }

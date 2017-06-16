@@ -124,6 +124,31 @@ nav {
         }
       }
 
+      &.uber-item {
+        @include transition-all;
+
+        background: $primary;
+
+        > a {
+          color: white !important;
+          @include transition-all;
+        }
+
+        &.active,
+        &:hover {
+          ::after {
+            background: $primary-primed !important;
+          }
+
+          > a,
+          > a:focus {
+            @include transition-all;
+            color: white !important;
+            background: $primary-primed !important;
+          }
+        }
+      }
+
       a {
         color: black;
       }
@@ -187,20 +212,20 @@ nav {
     h1 {
       @include heading-font;
       letter-spacing: 5px;
-      font-size: 40px;
+      font-size: 30px;
 
       @media #{$large-and-up} {
-        font-size: 50px;
+        font-size: 40px;
         letter-spacing: 10px;
       }
     }
 
     h2 {
       @include body-font;
-      font-size: 25px;
+      font-size: 20px;
 
       @media #{$large-and-up} {
-        font-size: 35px;
+        font-size: 25px;
       }
     }
   }

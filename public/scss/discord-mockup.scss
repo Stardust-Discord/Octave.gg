@@ -102,8 +102,8 @@ $body-padding: 20px;
   .items-panel {
     background: #1e2124;
     height: inherit;
-    width: 80px;
-    padding: 15px;
+    width: 70px;
+    padding: 10px;
     //border-radius: 5px 0 0 5px;
 
     .actions {
@@ -178,6 +178,7 @@ $body-padding: 20px;
       }
     }
   }
+
   .sidebar-panel {
     background: #2e3136;
     height: inherit;
@@ -200,25 +201,38 @@ $body-padding: 20px;
     @include hide-scrollbar;
 
     .items {
-      margin-top: $section-header-height;
-      .item {
-        height: 36px;
-        cursor: pointer;
-        line-height: 36px;
-        vertical-align: middle;
-        padding-left: 20px;
-        opacity: 0.3;
-        color: white;
-        &::before {
-          content: $token;
-          color: #8a8e94 !important;
-          margin-right: 3px;
-          font-weight: normal;
-        }
+      margin-top: $section-header-height + 8px;
 
-        &:hover {
-          opacity: 1;
-          background: linear-gradient(to right,#282b30 85%,#2e3136);
+      .item {
+        height: 34px;
+        overflow: hidden;
+        position: relative;
+
+        .content {
+          box-sizing: border-box;
+          height: 32px;
+          margin: 1px 8px 1px 8px;
+          padding: 0 8px;
+
+          font-size: 16px;
+          color: #72767d;
+
+          line-height: 32px;
+
+          border-radius: 3px;
+
+          &::before {
+            content: $token;
+            color: #8a8e94 !important;
+            margin-right: 5px;
+            font-weight: normal;
+          }
+
+          &:hover,
+          &.selected {
+            color: white;
+            background-color: rgba(79,84,92,.6);
+          }
         }
       }
     }

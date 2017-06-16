@@ -3,10 +3,11 @@ extends layout
 
 mixin nav-items
     li: a.page-scroll(href='https://github.com/Gnar-Team/Gnar-bot', target='_blank') GitHub
-    li: a.page-scroll(href='https://discord.gg/NQRpmr2', target='_blank') Chat Room
-    li.super-item: a.page-scroll(href='/invite', target='_blank') Get Gnar
+    li: a.page-scroll(href='https://discord.gg/NQRpmr2', target='_blank') Discord Channel
+    li.uber-item: a.page-scroll(href='https://www.patreon.com/gnarbot', target='_blank') Patreon
+    li.super-item: a.page-scroll(href='/invite', target='_blank') Invite Gnar
 
-block content
+block content 
 
     nav#nav.navbar-fixed
         .container.nav-wrapper
@@ -25,16 +26,21 @@ block content
                 .col.s12.l3
                     .card-panel.header-content
                         .hide-on-med-only
-                            center: img.z-depth-5.main-icon.responsive-img.circle(src='assets/img/logo.jpg')
-                            h1 GNAR
-                            h2= splash_text
+                            center
+                                img.z-depth-5.main-icon.responsive-img.circle(src='assets/img/logo.jpg')
+                                h1 GNAR
+                            h2.
+                                Gnar is a <b>music bot</b> packed with dank memes to rescue your soul from
+                                the depths of the underworld.
                         .hide-on-large-only.hide-on-small-and-down
                             .row.valign-wrapper
                                 .col.s4
                                     center: img.z-depth-5.main-icon.responsive-img.circle(src='assets/img/logo.jpg')
                                 .col.s8
-                                    h1 GNAR
-                                    h2= splash_text
+                                    h1 Gnar
+                                    h2.
+                                        Gnar is a <u>music bot</u> packed with dank memes to rescue your soul from
+                                        the depths of the underworld.
                 .col.m12.l9
                     include discord-mockup/mockup
 
@@ -57,4 +63,3 @@ block content
     //            .col.l3.m6.s12: .card.small
     //                .card-content
     //                    p Hello there
-

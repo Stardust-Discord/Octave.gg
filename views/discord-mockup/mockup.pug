@@ -8,24 +8,33 @@ include mixins
             .zoom
         .items
             .item
-                img.responsive-img(src='assets/img/logo.jpg')
+                a(href='http://discord.gg/NQRpmr2', target='_blank'): img.responsive-img(src='assets/img/logo.jpg')
             .item
                 a(href='/invite', target='_blank'): button.guild-add +
     .sidebar-panel
-        .header Demonstration
+        .header Features
         .items
-            .item.trigger-group(data='default')
-                | help
-            .item.trigger-group(data='general')
-                | general
-            .item.trigger-group(data='searching')
-                | searching
-            .item.trigger-group(data='overwatch')
-                | overwatch
-            .item.trigger-group(data='music')
-                | music
             .item
-                | ... more docs soon!
+                .content.trigger-group(data='default')
+                    | help
+            .item
+                .content.trigger-group(data='general')
+                    | general
+            .item
+                .content.trigger-group(data='searching')
+                    | searching
+            .item
+                .content.trigger-group(data='overwatch')
+                    | overwatch
+            .item
+                .content.trigger-group(data='music')
+                    | music
+            .item
+                .content
+                    | ... more docs soon!
+            .item
+                a(href='https://www.ej-technologies.com/products/jprofiler/overview.html', target='_blank'): .content
+                    | AD: JProfiler (Free License)
 
     .messages-panel
         include msg-groups/default

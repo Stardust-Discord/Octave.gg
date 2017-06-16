@@ -18,29 +18,26 @@ mixin cmd(s)
                         p Commands that help with the regulating normal server tasks.
                 .fields
                     .field-inline
-                        +cmd("ban")
-                        +cmd("kick")
-                        +cmd("unban")
-                    .field-inline
                         +cmd("prune")
-                        +cmd("deletemsg")
+                    .field-inline
                         +cmd("enable")
                     .field-inline
                         +cmd("disable")
-                        +cmd("listdisabled")
 
                 .fields
                 .fields
                     .field
-                        .field-title Music — 12
+                        .field-title Music — 15
                         p Listen to the bot's fabulous renditions of your favorite songs.
                 .fields
                     .field-inline
+                        +cmd("youtube")
+                        +cmd("soundcloud")
+                        +cmd("music")
                         +cmd("play")
-                        +cmd("leave")
                         +cmd("pause")
-                        +cmd("stop")
                     .field-inline
+                        +cmd("stop")
                         +cmd("skip")
                         +cmd("shuffle")
                         +cmd("nowplaying")
@@ -50,11 +47,12 @@ mixin cmd(s)
                         +cmd("repeat")
                         +cmd("reset")
                         +cmd("voteskip")
+                        +cmd("volume")
 
                 .fields
                 .fields
                     .field
-                        .field-title Fun — 21
+                        .field-title Fun — 17
                         p Everything here is memes. Dank unfiltered memes. Batteries not included.
                 .fields
                     .field-inline
@@ -64,18 +62,14 @@ mixin cmd(s)
                         +cmd("roll")
                         +cmd("poop")
                         +cmd("goodshit")
-                        +cmd("8ball")
                     .field-inline
+                        +cmd("8ball")
                         +cmd("leet")
-                        +cmd("marvel")
-                        +cmd("eyes")
                         +cmd("tts")
-                        +cmd("champdata")
                         +cmd("answer")
                         +cmd("trivia")
-                    .field-inline
-                        +cmd("q")
                         +cmd("pbot")
+                    .field-inline
                         +cmd("meme")
                         +cmd("cats")
                         +cmd("c&h")
@@ -85,7 +79,7 @@ mixin cmd(s)
                 .fields
                 .fields
                     .field
-                        .field-title General — 21
+                        .field-title General — 19
                         p General bot commands that every lame bot has. Have fun!
                 .fields
                     .field-inline
@@ -95,7 +89,7 @@ mixin cmd(s)
                         +cmd("math")
                         +cmd("remindme")
                         +cmd("google")
-                        +cmd("youtube")
+                        +cmd("video")
                     .field-inline
                         +cmd("ptime")
                         +cmd("whois")
@@ -105,9 +99,7 @@ mixin cmd(s)
                         +cmd("dialog")
                         +cmd("react")
                     .field-inline
-                        +cmd("adventure")
                         +cmd("overwatch")
-                        +cmd("league")
                         +cmd("game")
                         +cmd("poll")
                         +cmd("quote")

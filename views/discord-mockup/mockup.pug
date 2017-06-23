@@ -16,29 +16,27 @@ include mixins
         .items
             .item
                 .content.trigger-group(data='default')
-                    | help
+                    | readme
             .item
-                .content.trigger-group(data='general')
-                    | general
-            .item
-                .content.trigger-group(data='searching')
-                    | searching
-            .item
-                .content.trigger-group(data='overwatch')
-                    | overwatch
+                .content.trigger-group(data='mod')
+                    | moderation
             .item
                 .content.trigger-group(data='music')
                     | music
             .item
-                .content
-                    | ... more docs soon!
+                .content.trigger-group(data='fun')
+                    | fun and memes
             .item
-                a(href='https://www.ej-technologies.com/products/jprofiler/overview.html', target='_blank'): .content
-                    | AD: JProfiler (Free License)
+                .content.trigger-group(data='general')
+                    | general
+            .item
+                .content.trigger-group(data='sponsor')
+                    | sponsors
 
     .messages-panel
         include msg-groups/default
+        include msg-groups/configuration
         include msg-groups/general
-        include msg-groups/searching
-        include msg-groups/overwatch
+        include msg-groups/fun
         include msg-groups/music
+        include msg-groups/sponsor

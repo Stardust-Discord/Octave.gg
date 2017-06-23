@@ -25,6 +25,13 @@ $body-padding: 20px;
   transition: all .3s ease;
 }
 
+code.inline,
+pre code {
+  background: #2f3136;
+  border-radius: 2px;
+  font-family: Consolas, Liberation Mono, Menlo, Courier, monospace;
+}
+
 .discord-mockup {
   background: #36393e;
   position: relative;
@@ -39,36 +46,6 @@ $body-padding: 20px;
   overflow-x: hidden;
 
    @media #{$small-and-down} {
-     //flex-direction: column;
-     //
-     //.items-panel {
-     //   width: 100% !important;
-     //   height: 80px !important;
-     //
-     //   .actions {
-     //     display: none !important;
-     //   }
-     //
-     //   .items {
-     //     flex-direction: row !important;
-     //
-     //     .item {
-     //       margin: auto 10px 0 0 !important;
-     //     }
-     //   }
-     //}
-     //.sidebar-panel {
-     //  width: 100% !important;
-     //  height: 120px !important;
-     //
-     //  .header {
-     //    display: none !important;
-     //  }
-     //
-     //  .items {
-     //    margin-top: 0 !important;
-     //  }
-     //}
      .items-panel {
        display: none;
 
@@ -102,8 +79,11 @@ $body-padding: 20px;
   .items-panel {
     background: #1e2124;
     height: inherit;
-    width: 70px;
+    width: 87px;
     padding: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-right: -17px;
     //border-radius: 5px 0 0 5px;
 
     .actions {
@@ -317,6 +297,7 @@ $body-padding: 20px;
               margin-top: 10px;
               display: flex;
               line-height: 1.1em;
+              max-width: 440px !important;
 
               .content-inner {
                 background-color: rgba(46,48,54,.3);
@@ -326,13 +307,10 @@ $body-padding: 20px;
                 display: flex;
 
                 .description {
-                  $field-padding: 15px;
 
                   word-wrap: break-word;
                   flex: 1;
-                  max-width: 500px;
                   color: hsla(0, 0%, 100%, .7);
-                  margin-bottom: -$field-padding;
 
                   font-size: 12px;
 
@@ -351,16 +329,14 @@ $body-padding: 20px;
                     display: inline-block;
                   }
 
-                  .text {
-                    padding-bottom: $field-padding;
-                  }
 
                   .fields {
                     display: flex;
                     flex-direction: row;
                     flex-wrap: wrap;
                     padding-top: 5px;
-                    padding-bottom: 15px;
+
+                    max-width: 440px !important;
 
                     .field-title {
                       color: white !important;

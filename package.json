@@ -8,13 +8,19 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "body-parser": "~1.16.0",
+    "body-parser": "~1.16.1",
+    "client-oauth2": "^4.1.0",
     "cookie-parser": "~1.4.3",
-    "debug": "~2.6.0",
+    "debug": "~2.6.8",
     "express": "~4.14.1",
-    "pug": "~2.0.0-beta11",
+    "express-session": "^1.15.3",
+    "helmet": "^3.6.1",
+    "morgan": "~1.8.2",
     "node-sass-middleware": "~0.11.0",
-    "morgan": "~1.8.0",
-    "serve-favicon": "~2.3.2"
+    "pug": "~2.0.0-rc.2",
+    "rethinkdbdash": "^2.2.1",
+    "serve-favicon": "~2.3.2",
+    "session-rethinkdb": "^2.0.0",
+    "superagent": "^3.5.2"
   }
 }

@@ -1,15 +1,37 @@
-let express = require('express');
-let path = require('path');
-let favicon = require('serve-favicon');
-let logger = require('morgan');
-let cookieParser = require('cookie-parser');
-let bodyParser = require('body-parser');
+"use strict";
 
-let sass = require('node-sass-middleware');
+const credentials = require('./credentials');
 
-let index = require('./routes/index');
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const sass = require('node-sass-middleware');
+const helmet = require('helmet');
 
-let app = express();
+const index = require('./routes/index');
+const dashboard = require('./routes/dashboard');
+
+const app = express();
+
+const r = require('rethinkdbdash')({
+    db: 'web'
+});
+const session = require('express-session');
+const RDBStore = require('session-rethinkdb')(session);
+
+const store = new RDBStore(r, {
+    table: 'sessions'
+});
+
+app.use(session({
+    secret: credentials.sessionSecret.toString(),
+    store: store,
+    resave: true,
+    saveUninitialized: true
+}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -28,17 +50,20 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(helmet({
+    frameguard: false
+}));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-//app.use('/users', users);
+app.use('/dashboard', dashboard);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
-  let err = new Error('Not Found');
+  const err = new Error('Not Found');
   err.status = 404;
-  next(err);
+  res.end("Not found!")
 });
 
 // error handler

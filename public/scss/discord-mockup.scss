@@ -233,6 +233,10 @@ $body-padding: 20px;
             color: white;
             background-color: rgba(79,84,92,.6);
           }
+
+          &:not(.selected) {
+            cursor: pointer;
+          }
         }
       }
     }

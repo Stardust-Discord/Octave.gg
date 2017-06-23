@@ -2,3 +2,5 @@
 .node_modules/
 
 public/scss/*.css
+
+credentials.js

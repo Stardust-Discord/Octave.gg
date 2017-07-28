@@ -9,7 +9,7 @@ $mockup-height: 700px;
 $token: '#';
 $section-header-height: 56px;
 
-$sidebar-width: 240px;
+$sidebar-width: 216px;
 
 $icon-size: 40px;
 $body-padding: 20px;
@@ -29,6 +29,7 @@ code.inline,
 pre code {
   background: #2f3136;
   border-radius: 2px;
+  display: inline-block;
   font-family: Consolas, Liberation Mono, Menlo, Courier, monospace;
 }
 
@@ -67,7 +68,7 @@ code {
   font-family: 'Open Sans', Calibri, serif;
 
 
-  @media #{$small-and-down} {
+  @media #{$medium-and-down} {
    .items-panel {
      display: none;
 
@@ -324,7 +325,6 @@ code {
               margin-top: 10px;
               display: flex;
               line-height: 1.1em;
-              max-width: 440px !important;
 
               .content-inner {
                 background-color: rgba(46,48,54,.3);
@@ -332,9 +332,9 @@ code {
                 border-radius: 0 3px 3px 0;
                 padding: 8px 10px;
                 display: flex;
+                max-width: 506px;
 
                 .description {
-
                   word-wrap: break-word;
                   flex: 1;
                   color: hsla(0, 0%, 100%, .7);
@@ -363,8 +363,6 @@ code {
                     flex-wrap: wrap;
                     padding-top: 5px;
 
-                    max-width: 440px !important;
-
                     .field-title {
                       color: white !important;
                       font-weight: bold !important;
@@ -373,7 +371,6 @@ code {
                     .field {
                       flex: 0;
                       min-width: 100%;
-                      max-width: 506px;
                       margin-top: 5px;
                     }
                     .field-inline {

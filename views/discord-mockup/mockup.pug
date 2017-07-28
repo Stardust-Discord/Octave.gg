@@ -9,6 +9,10 @@ include mixins
         .items
             .item
                 a(href='http://discord.gg/NQRpmr2', target='_blank'): img.responsive-img(src='assets/img/logo.jpg')
+            if login
+                each guild in guilds
+                    .item
+                        a(href=guild.link, target='_blank'): img.responsive-img(src=guild.icon)
             .item
                 a(href='/invite', target='_blank'): button.guild-add +
     .sidebar-panel

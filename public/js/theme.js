@@ -10,9 +10,11 @@
         event.preventDefault();
     });
 
-    // $('#nav').pushpin({
-    //     top: 50
-    // });
+    $('#nav').pushpin({
+        top: 10
+    });
+
+    $(".dropdown-button").dropdown();
 
     $(".button-collapse").sideNav({
         closeOnClick: true,

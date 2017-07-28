@@ -3,67 +3,61 @@
     .messages
         +msg('assets/img/avarel.jpg', 'Avalon', '_autorole')
         +msg('assets/img/logo.jpg', 'Gnar')
-            .embed-wrapper
-                .color-pill
-                .content-inner
-                    .description
-                        .title _autorole
-                        .text
-                            p Set auto-roles that are assigned to users on joining.
-                            p Current auto-role: <u>None</u>
+            +embed-content
+                .description
+                    .title _autorole
+                    .text
+                        p Set auto-roles that are assigned to users on joining.
+                        p Current auto-role: <u>None</u>
 
-                        .fields
-                            .field
-                                .field-title Arguments
-                                p
-                                    code.inline set (@role)
-                                    |  • Set the auto-role.
-                                p
-                                    code.inline unset
-                                    |  • Unset the auto-role.
+                    .fields
+                        .field
+                            .field-title Arguments
+                            p
+                                code.inline set (@role)
+                                |  • Set the auto-role.
+                            p
+                                code.inline unset
+                                |  • Unset the auto-role.
         +msg('assets/img/avarel.jpg', 'Avalon', '_cmd')
         +msg('assets/img/logo.jpg', 'Gnar')
-            .embed-wrapper
-                .color-pill
-                .content-inner
-                    .description
-                        .title _cmd
-                        .text
-                            p Enable or disable certain commands.
-                        .fields
-                            .field
-                                .field-title Arguments
-                                p
-                                    code.inline enable (cmd)
-                                    |  • Enable a command.
-                                p
-                                    code.inline disable (cmd)
-                                    |  • Disable a command.
-                                p
-                                    code.inline list
-                                    |  • List disabled commands.
+            +embed-content
+                .description
+                    .title _cmd
+                    .text
+                        p Enable or disable certain commands.
+                    .fields
+                        .field
+                            .field-title Arguments
+                            p
+                                code.inline enable (cmd)
+                                |  • Enable a command.
+                            p
+                                code.inline disable (cmd)
+                                |  • Disable a command.
+                            p
+                                code.inline list
+                                |  • List disabled commands.
         +msg('assets/img/avarel.jpg', 'Avalon', '_ignore')
         +msg('assets/img/logo.jpg', 'Gnar')
-            .embed-wrapper
-                .color-pill
-                .content-inner
-                    .description
-                        .title _ignore
-                        .text
-                            p Make the bot ignore certain users, channels or roles.
+            +embed-content
+                .description
+                    .title _ignore
+                    .text
+                        p Make the bot ignore certain users, channels or roles.
 
-                        .fields
-                            .field
-                                .field-title Arguments
-                                p
-                                    code.inline user (user)
-                                    |  • Ignore/unignore a user.
-                                p
-                                    code.inline channel (channel)
-                                    |  • Ignore/unignore a channel.
-                                p
-                                    code.inline role (role)
-                                    |  • Ignore/unignore users with a role.
-                                p
-                                    code.inline list
-                                    |  • List ignored entities.
+                    .fields
+                        .field
+                            .field-title Arguments
+                            p
+                                code.inline user (user)
+                                |  • Ignore/unignore a user.
+                            p
+                                code.inline channel (channel)
+                                |  • Ignore/unignore a channel.
+                            p
+                                code.inline role (role)
+                                |  • Ignore/unignore users with a role.
+                            p
+                                code.inline list
+                                |  • List ignored entities.

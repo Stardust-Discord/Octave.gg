@@ -1,26 +1,69 @@
 extends layout
 
-
-mixin nav-items
-    li: a.page-scroll(href='https://github.com/Gnar-Team/Gnar-bot', target='_blank') GitHub
-    li: a.page-scroll(href='https://discord.gg/NQRpmr2', target='_blank') Discord Channel
-    li.uber-item: a.page-scroll(href='https://www.patreon.com/gnarbot', target='_blank') Patreon
-    li.super-item: a.page-scroll(href='/invite', target='_blank') Invite Gnar
-
-block content 
-
+block content
     nav#nav.navbar-fixed
         .container.nav-wrapper
             a.brand-logo.page-scroll(href='#page-top') Gnar
             a.button-collapse(href="#" data-activates="mobilebar")
                 i.material-icons menu
             ul.right.hide-on-med-and-down
-                +nav-items
+                li: a(href='https://github.com/Gnar-Team/Gnar-bot', target='_blank')
+                    i.material-icons class
+                li: a(href='https://discord.gg/NQRpmr2', target='_blank')
+                    i.material-icons forum
+                li.uber-item: a(href='https://www.patreon.com/gnarbot', target='_blank')
+                    i.material-icons.left attach_money
+                    | Patreon
+                li.super-item: a(href='/invite', target='_blank')
+                    i.material-icons.left grade
+                    | Invite Gnar
+                if login
+                    //li(style='height: 64px'):
+                    li.alt-item
+                        a.dropdown-button(href='#!' data-activates='dropdown')
+                            img.discord-avatar.responsive-img(src=user.icon)
+                            i.material-icons.right arrow_drop_down
+                            = user.name
+                        ul#dropdown.dropdown-content
+                            li: a(href='#')
+                                i.material-icons.left home
+                                | Home
+                            li.divider
+                            li: a(href='/logout')
+                                i.material-icons.left settings_power
+                                | Logout
+                else
+                    li.alt-item: a(href='/login')
+                        i.material-icons.right perm_identity
+                        | Login
 
     ul#mobilebar.side-nav
-        +nav-items
+        li: a.page-scroll(href='https://github.com/Gnar-Team/Gnar-bot', target='_blank')
+            i.material-icons class
+            | GitHub
+        li: a.page-scroll(href='https://discord.gg/NQRpmr2', target='_blank')
+            i.material-icons forum
+            | Discord Channel
+        li.uber-item: a.page-scroll(href='https://www.patreon.com/gnarbot', target='_blank')
+            i.material-icons.left attach_money
+            | Patreon
+        li.super-item: a.page-scroll(href='/invite', target='_blank')
+            i.material-icons.left grade
+            | Invite Gnar
+        if login
+            li: a(href='#')
+                i.material-icons.left home
+                | Home
+            li.divider
+            li: a(href='/logout')
+                i.material-icons.left settings_power
+                | Logout
+        else
+            li: a(href='/login')
+                i.material-icons.left perm_identity
+                | Login
 
-    .hero
+    #page-top.hero
         .container
             .row.valign-wrapper
                 .col.s12.l3
@@ -30,8 +73,7 @@ block content
                                 img.z-depth-5.main-icon.responsive-img.circle(src='assets/img/logo.jpg')
                                 h1 GNAR
                             h2.
-                                Gnar is a music bot packed with dank memes to rescue your soul from
-                                the depths of the underworld.
+                                Gnar is a Discord music bot packed with dank memes, fun, and other goodies.
                         .hide-on-large-only.hide-on-small-and-down
                             .row.valign-wrapper
                                 .col.s4
@@ -39,8 +81,7 @@ block content
                                 .col.s8
                                     h1 Gnar
                                     h2.
-                                        Gnar is a <u>music bot</u> packed with dank memes to rescue your soul from
-                                        the depths of the underworld.
+                                        Gnar is a Discord <u>music bot</u> packed with dank memes, fun, and other goodies.
                 .col.m12.l9
                     include discord-mockup/mockup
 

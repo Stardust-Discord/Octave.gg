@@ -26,8 +26,11 @@ const store = new RDBStore(r, {
     table: 'sessions'
 });
 
+app.set('trust proxy', 1);
+
 app.use(session({
     secret: credentials.sessionSecret.toString(),
+    cookie: { secure: true },
     store: store,
     resave: true,
     saveUninitialized: true

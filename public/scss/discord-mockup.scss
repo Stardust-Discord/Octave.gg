@@ -32,6 +32,26 @@ pre code {
   font-family: Consolas, Liberation Mono, Menlo, Courier, monospace;
 }
 
+code.inline,
+pre code {
+  background: #2f3136;
+}
+code.inline {
+  width: auto;
+  height: auto;
+  padding: .2em;
+  border-radius: 3px;
+  font-size: 85%;
+  font-family: Consolas,Liberation Mono,Menlo,Courier,monospace;
+  text-indent: 0;
+}
+code {
+  font-family: Menlo, Consolas, Monaco, monospace;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+
 .discord-mockup {
   background: #36393e;
   position: relative;
@@ -44,23 +64,25 @@ pre code {
   height: $mockup-height;
   border-radius: 5px;
   overflow-x: hidden;
+  font-family: 'Open Sans', Calibri, serif;
 
-   @media #{$small-and-down} {
-     .items-panel {
-       display: none;
 
-       &.show {
-         display: block;
-       }
-     }
-     .sidebar-panel {
-       display: none;
+  @media #{$small-and-down} {
+   .items-panel {
+     display: none;
 
-       &.show {
-         display: flex;
-       }
+     &.show {
+       display: block;
      }
    }
+   .sidebar-panel {
+     display: none;
+
+     &.show {
+       display: flex;
+     }
+   }
+  }
 
   .section-header {
     //float: top;
@@ -194,7 +216,7 @@ pre code {
           margin: 1px 8px 1px 8px;
           padding: 0 8px;
 
-          font-size: 16px;
+          font-size: 14px;
           color: #72767d;
 
           line-height: 32px;
@@ -285,8 +307,13 @@ pre code {
 
             p, .content {
               color: hsla(0, 0%, 100%, .7);
-              font-size: 12px;
+              font-size: 13px;
               margin: 0;
+
+              img {
+                margin-top: 10px;
+                max-width: 220px;
+              }
             }
 
             b {
@@ -312,7 +339,7 @@ pre code {
                   flex: 1;
                   color: hsla(0, 0%, 100%, .7);
 
-                  font-size: 12px;
+                  font-size: 13px;
 
                   a {
                     color: #0096d1;

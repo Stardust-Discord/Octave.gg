@@ -14,24 +14,40 @@ mixin cmds(...cmds)
 
                 .fields
                     .field
-                        .field-title Moderation — 4
-                        +cmds('cmd', 'ignore', 'prune', 'autorole')
+                        .field-title Settings — 9
+                        +cmds(
+                            'prefix', 'commands', 'ignore', 'autodelete', 'prune', 'autorole', 'selfroles', 'music',
+                            'resetall'
+                        )
 
                 .fields
                     .field
-                        .field-title Music — 15
-                        +cmds('youtube', 'soundcloud', 'music', 'play', 'pause', 'stop', 'skip', 'shuffle', 'nowplaying',
-                                'queue', 'restart', 'repeat', 'voteskip', 'volume', 'seek')
+                        .field-title Music — 18
+                        +cmds(
+                            'play', 'pause', 'stop', 'skip', 'remove', 'move', 'forceskip', 'shuffle', 'nowplaying',
+                            'queue', 'restart', 'repeat', 'voteskip', 'volume', 'jump', 'discordfm', 'youtube',
+                            'soundcloud'
+                        )
+                .fields
+                    .field
+                        .field-title Fun — 11
+                        +cmds(
+                            'ascii', 'coinflip', 'dialog', 'yodatalk', 'roll', 'poop', '8ball', 'leet', 'lenny', 'ttb',
+                            'tts'
+                        )
 
                 .fields
                     .field
-                        .field-title Fun — 18
-                        +cmds('urbandict', 'trump', 'coinflip', 'yodatalk', 'roll', 'poop', 'goodshit', '8ball', 'leet',
-                                'tts', 'answer', 'trivia', 'pbot', 'meme', 'cats', 'c&h', 'rcg', 'xkcd')
+                        .field-title Media — 14
+                        +cmds(
+                            'google', 'video', 'urbandict', 'overwatch', 'game', 'anime', 'manga', 'meme', 'trump',
+                            'cats', 'c&h', 'rcg', 'xkcd', 'action'
+                        )
 
                 .fields
                     .field
-                        .field-title General — 21
-                        +cmds('help', 'invite', 'ping', 'math', 'remindme', 'google', 'video', 'uptime', 'whois', 'guild',
-                                'info', 'donate', 'redeem', 'ascii', 'dialog', 'react', 'overwatch', 'game', 'poll', 'quote',
-                                'ttb')
+                        .field-title General — 16
+                        +cmds(
+                            'help', 'invite', 'ping', 'kaiper', 'math', 'remindme', 'uptime', 'user', 'guild', 'about',
+                            'donate', 'redeem', 'iam', 'quote', 'react', 'poll'
+                        )

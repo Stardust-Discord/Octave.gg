@@ -99,35 +99,11 @@ nav {
       //background: white;
 
 
+
       &.super-item {
         @include transition-all;
 
         background: $accent;
-
-        > a {
-          color: $accent-text !important;
-          @include transition-all;
-        }
-
-        &.active,
-        &:hover {
-          ::after {
-            background: $accent-primed !important;
-          }
-
-          > a,
-          > a:focus {
-            @include transition-all;
-            color: white !important;
-            background: $accent-primed !important;
-          }
-        }
-      }
-
-      &.uber-item {
-        @include transition-all;
-
-        background: $primary;
 
         > a {
           color: white !important;
@@ -137,14 +113,74 @@ nav {
         &.active,
         &:hover {
           ::after {
-            background: $primary-primed !important;
+            background: $accent-primed !important;
+          }
+
+          > a,
+          > a:focus {
+            @include transition-all;
+            background: $accent-primed !important;
+          }
+        }
+      }
+
+      &.uber-item {
+        @include transition-all;
+
+        background: #052D49;
+
+        > a {
+          color: white !important;
+          @include transition-all;
+        }
+
+        &.active,
+        &:hover {
+          ::after {
+            background: #0d89d7 !important;
           }
 
           > a,
           > a:focus {
             @include transition-all;
             color: white !important;
-            background: $primary-primed !important;
+            background: #0d89d7 !important;
+          }
+        }
+      }
+
+      &.alt-item {
+        @include transition-all;
+
+        background: #2e935b;
+
+        .discord-avatar {
+          height: 64px;
+          margin-bottom: -26px;
+          margin-right: 20px;
+        }
+
+        a.dropdown-button {
+          padding-left: 0;
+          max-height: 64px;
+        }
+
+        > a {
+          color: white !important;
+          @include transition-all;
+        }
+
+        &.active,
+        &:hover {
+          ::after {
+            background: #29c86d !important;
+          }
+
+          > a,
+          > a:focus {
+            @include transition-all;
+            color: white !important;
+            background: #29c86d !important;
           }
         }
       }
@@ -189,7 +225,7 @@ nav {
   width: 100%;
   //height: 100%;
   overflow-y: hidden;
-  background: url('../assets/img/bg-tile.png'), linear-gradient(to bottom, $primary-primed, $primary-dark);
+  background: url('../assets/img/bg-tile.png'), linear-gradient(to bottom, #2196F3, #0c3a77);
 
   min-height: 100%;
 
@@ -202,7 +238,7 @@ nav {
   padding-bottom: 150px;
 
   @media #{$large-and-up} {
-    padding-top: 150px;
+    padding-top: 120px;
     margin-bottom: -150px;
   }
 

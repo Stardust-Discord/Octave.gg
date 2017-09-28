@@ -3,6 +3,12 @@ mixin cmds(...cmds)
         code.inline= cmd
         | &ensp;
 
+mixin cmd(title, description)
+    code.inline=title
+    | &nbsp;•&nbsp;
+    =description
+    br
+
 #default.messages-group.show
     .header Help and Documentation
     .messages
@@ -51,3 +57,29 @@ mixin cmds(...cmds)
                             'help', 'invite', 'ping', 'kaiper', 'math', 'remindme', 'uptime', 'user', 'guild', 'about',
                             'donate', 'redeem', 'iam', 'quote', 'react', 'poll'
                         )
+        +msg('assets/img/avarel.jpg', 'Avalon', '_help [Music]')
+        +msg('assets/img/logo.jpg', 'Gnar')
+            +embed-desc('#00dd58')
+                .title Music Commands
+                .fields
+                    .field
+                        .field-title Commands
+                        .text
+                            +cmd('play', 'Joins and play music in a channel.')
+                            +cmd('pause', 'Pause or resume the music player.')
+                            +cmd('stop', 'Stop and clear the music player.')
+                            +cmd('skip', "Skip the current music track if you're the requester.")
+                            +cmd('remove', 'Remove a song from the queue.')
+                            +cmd('move', 'Move the bot to a channel.')
+                            +cmd('forceskip', 'Skip the current music track forcefully.')
+                            +cmd('shuffle', 'Shuffle the music queue.')
+                            +cmd('nowplaying', "Shows what's currently playing.")
+                            +cmd('queue', "Shows the music that's currently queued.")
+                            +cmd('restart', 'Restart the current song.')
+                            +cmd('repeat', 'Set if the music player should repeat.')
+                            +cmd('voteskip', 'Vote to skip the current music track.')
+                            +cmd('volume', 'Set the volume of the music player.')
+                            +cmd('jump', 'Set the time marker of the music playback.')
+                            +cmd('discordfm', 'Stream random songs from DiscordFM stations!')
+                            +cmd('youtube', 'Search and see YouTube results.')
+                            +cmd('soundcloud', 'Search and see SoundCloud results.')

@@ -69,7 +69,9 @@ code {
 
 
   @media #{$medium-and-down} {
-   .items-panel {
+    height: calc(100vh - 350px); // addition
+
+    .items-panel {
      display: none;
 
      &.show {
@@ -85,6 +87,12 @@ code {
    }
   }
 
+  // addition
+  @media #{$small-and-down} {
+    height: 700px;
+    border-radius: 5px 5px 0 0;
+  }
+
   .section-header {
     //float: top;
     position: absolute;
@@ -96,7 +104,6 @@ code {
     padding-left: 24px;
     margin-bottom: 20px;
     font-weight: bold;
-
   }
 
   .items-panel {

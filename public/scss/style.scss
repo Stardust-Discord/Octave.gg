@@ -235,11 +235,10 @@ nav {
   }
 
   padding-top: 70px;
-  padding-bottom: 150px;
 
   @media #{$large-and-up} {
     padding-top: 120px;
-    margin-bottom: -150px;
+    padding-bottom: 120px;
   }
 
   .header-content {

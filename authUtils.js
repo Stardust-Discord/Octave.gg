@@ -8,8 +8,8 @@ const discordAuth = new ClientOAuth2({
     clientSecret: credentials.discordApp.secret,
     accessTokenUri: 'https://discordapp.com/api/oauth2/token',
     authorizationUri: 'https://discordapp.com/oauth2/authorize',
-    redirectUri: 'https://gnarbot.xyz/dashboard/callback',
-    scopes: ['identify', 'guilds']
+    redirectUri: credentials.discordApp.redirectUri,
+    scopes: credentials.discordApp.scopes
 });
 
 async function token(obj) {

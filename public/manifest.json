@@ -1,0 +1,7 @@
+{
+    "name": "Gnar Bot",
+    "short_name": "Gnar",
+    "start_url": "/",
+    "display": "fullscreen",
+    "orientation": "portrait"
+}

@@ -110,7 +110,7 @@ code {
     background: #1e2124;
     height: inherit;
     width: 87px;
-    padding: 10px;
+    padding: 10px 27px 10px 10px;
     overflow-x: hidden;
     overflow-y: scroll;
     margin-right: -17px;
@@ -194,6 +194,7 @@ code {
     height: inherit;
     overflow-y: auto;
     width: $sidebar-width;
+    z-index: 1;
 
     @media #{$medium-and-down} {
       width: $sidebar-width - 20;

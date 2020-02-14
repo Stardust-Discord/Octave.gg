@@ -12,11 +12,11 @@ mixin cmd(title, description)
 #default.messages-group.show
     .header Help and Documentation
     .messages
-        +msg('assets/img/avarel.png', 'Avalon', '_help')
-        +msg('assets/img/logo.png', 'Gnar')
+        +msg('assets/img/melmsie.png', 'Melmsie', '_help')
+        +msg('assets/img/logo.png', 'Octave')
             +embed-desc
-                .title Gnar Documentation
-                .text The prefix of the bot on this server is <code class="inline">_</code>.
+                .title Available Commands
+                .text The prefix of the bot by default is <code class="inline">_</code>.
 
                 .fields
                     .field
@@ -35,29 +35,28 @@ mixin cmd(title, description)
                         )
                 .fields
                     .field
-                        .field-title Fun — 11
+                        .field-title Fun — 10
                         +cmds(
-                            'ascii', 'coinflip', 'dialog', 'yodatalk', 'roll', 'poop', '8ball', 'leet', 'lenny', 'ttb',
+                            'ascii', 'coinflip', 'dialog', 'roll', 'poop', '8ball', 'leet', 'lenny', 'ttb',
                             'tts'
                         )
 
                 .fields
                     .field
-                        .field-title Media — 14
+                        .field-title Media — 11
                         +cmds(
-                            'google', 'video', 'urbandict', 'overwatch', 'game', 'anime', 'manga', 'meme', 'trump',
-                            'cats', 'c&h', 'rcg', 'xkcd', 'action'
+                            'video', 'urbandict', 'overwatch', 'manga', 'meme', 'trump', 'cats', 'c&h', 'rcg', 'xkcd', 'action'
                         )
 
                 .fields
                     .field
-                        .field-title General — 16
+                        .field-title General — 14
                         +cmds(
-                            'help', 'invite', 'ping', 'kaiper', 'math', 'remindme', 'uptime', 'user', 'guild', 'about',
+                            'help', 'invite', 'ping', 'remindme', 'uptime', 'user', 'guild', 'about',
                             'donate', 'redeem', 'iam', 'quote', 'react', 'poll'
                         )
-        +msg('assets/img/avarel.png', 'Avalon', '_help [Music]')
-        +msg('assets/img/logo.png', 'Gnar')
+        +msg('assets/img/melmsie.png', 'Melmsie', '_help [Music]')
+        +msg('assets/img/logo.png', 'Octave')
             +embed-desc('#00dd58')
                 .title Music Commands
                 .fields

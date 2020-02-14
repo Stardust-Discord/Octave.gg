@@ -3,20 +3,20 @@ extends layout
 block content
     nav#nav.navbar-fixed
         .container.nav-wrapper
-            a.brand-logo.page-scroll(href='#page-top') Gnar
+            a.brand-logo.page-scroll(href='#page-top') Octave
             a.button-collapse(href="#" data-activates="mobilebar")
                 i.material-icons menu
             ul.right.hide-on-med-and-down
                 li: a(href='https://github.com/Gnar-Team/Gnar-bot', target='_blank')
-                    i.material-icons class
-                li: a(href='https://discord.gg/NQRpmr2', target='_blank')
-                    i.material-icons forum
+                    i.material-icons code
+                li: a(href='https://discord.gg/musicbot', target='_blank')
+                    i.material-icons chat
                 li.uber-item: a(href='https://www.patreon.com/gnarbot', target='_blank')
                     i.material-icons.left attach_money
                     | Patreon
                 li.super-item: a(href='/invite', target='_blank')
-                    i.material-icons.left grade
-                    | Invite Gnar
+                    i.material-icons.left add_circle
+                    | Invite Octave
                 if login
                     //li(style='height: 64px'):
                     li.alt-item
@@ -41,7 +41,7 @@ block content
         li: a.page-scroll(href='https://github.com/Gnar-Team/Gnar-bot', target='_blank')
             i.material-icons class
             | GitHub
-        li: a.page-scroll(href='https://discord.gg/NQRpmr2', target='_blank')
+        li: a.page-scroll(href='https://discord.gg/musicbot', target='_blank')
             i.material-icons forum
             | Discord Channel
         li.uber-item: a.page-scroll(href='https://www.patreon.com/gnarbot', target='_blank')
@@ -49,7 +49,7 @@ block content
             | Patreon
         li.super-item: a.page-scroll(href='/invite', target='_blank')
             i.material-icons.left grade
-            | Invite Gnar
+            | Invite Octave
         if login
             li: a(href='#')
                 i.material-icons.left home
@@ -71,16 +71,16 @@ block content
                         header.hide-on-med-only
                             center
                                 img.z-depth-5.main-icon.responsive-img.circle(src='assets/img/logo.png')
-                                h1 GNAR
+                                h1 Octave
                             h2.
-                                Gnar is a Discord <u>music bot</u> packed with dank memes, fun, and other goodies.
+                                Octave is a Discord <u>music bot</u> packed with dank memes, fun, and other goodies.
                         .hide-on-large-only.hide-on-small-and-down
                             .row.valign-wrapper
                                 .col.s12
                                     img.z-depth-5.main-icon.responsive-img.circle(src='assets/img/logo.png', style="float: left; width: 150px")
                                     div(style='margin-left: 200px')
-                                        h1 Gnar
+                                        h1 Octave
                                         h2.
-                                            Gnar is a Discord <u>music bot</u> packed with dank memes, fun, and other goodies.
+                                            Octave is a Discord <u>music bot</u> packed with dank memes, fun, and other goodies.
                 .col.m12.l9
                     include discord-mockup/mockup

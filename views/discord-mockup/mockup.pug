@@ -4,7 +4,7 @@ include mixins
     .items-panel
         .items
             .item
-                a(href='http://discord.gg/NQRpmr2', target='_blank'): img.responsive-img(src='assets/img/logo.png')
+                a(href='http://discord.gg/musicbot', target='_blank'): img.responsive-img(src='assets/img/logo.png')
             if login
                 each guild in guilds
                     .item
@@ -32,6 +32,9 @@ include mixins
             .item
                 .content.trigger-group(data='sponsor')
                     | sponsors
+            .item
+                .content.trigger-group(data='credits')
+                    | credits
 
     .messages-panel
         include msg-groups/default
@@ -40,3 +43,4 @@ include mixins
         include msg-groups/fun
         include msg-groups/music
         include msg-groups/sponsor
+        include msg-groups/credits

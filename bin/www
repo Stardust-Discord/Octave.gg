@@ -1,12 +1,12 @@
 #!/usr/bin/env node
-delete process.env["DEBUG_FD"];
+delete process.env['DEBUG_FD'];
 
 /**
  * Module dependencies.
  */
 
 let app = require('../app');
-let debug = require('debug')('Gnar-www:server');
+// let debug = require('debug')('Gnar-www:server');
 let http = require('http');
 
 /**
@@ -34,7 +34,7 @@ server.on('listening', onListening);
  * Normalize a port into a number, string, or false.
  */
 
-function normalizePort(val) {
+function normalizePort (val) {
   let port = parseInt(val, 10);
 
   if (isNaN(port)) {
@@ -51,10 +51,10 @@ function normalizePort(val) {
 }
 
 /**
- * Event listener for HTTP server "error" event.
+ * Event listener for HTTP server 'error' event.
  */
 
-function onError(error) {
+function onError (error) {
   if (error.syscall !== 'listen') {
     throw error;
   }
@@ -68,21 +68,19 @@ function onError(error) {
     case 'EACCES':
       console.error(bind + ' requires elevated privileges');
       process.exit(1);
-      break;
     case 'EADDRINUSE':
       console.error(bind + ' is already in use');
       process.exit(1);
-      break;
     default:
       throw error;
   }
 }
 
 /**
- * Event listener for HTTP server "listening" event.
+ * Event listener for HTTP server 'listening' event.
  */
 
-function onListening() {
+function onListening () {
   let addr = server.address();
   let bind = typeof addr === 'string'
     ? 'pipe ' + addr

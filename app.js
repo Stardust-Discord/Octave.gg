@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-const credentials = require('./credentials');
+const credentials = require('./credentials.json');
 
 const express = require('express');
 const path = require('path');
@@ -17,23 +17,23 @@ const dashboard = require('./routes/dashboard');
 const app = express();
 
 const r = require('rethinkdbdash')({
-    db: 'web'
+  db: 'web'
 });
 const session = require('express-session');
 const RDBStore = require('session-rethinkdb')(session);
 
 const store = new RDBStore(r, {
-    table: 'sessions'
+  table: 'sessions'
 });
 
 app.set('trust proxy', 1);
 
 app.use(session({
-    secret: credentials.sessionSecret.toString(),
-    cookie: { secure: true },
-    store: store,
-    resave: true,
-    saveUninitialized: true
+  secret: credentials.sessionSecret.toString(),
+  cookie: { secure: true },
+  store: store,
+  resave: true,
+  saveUninitialized: true
 }));
 
 // view engine setup
@@ -41,11 +41,11 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 app.use(sass({
-    src: path.join(__dirname, 'public', 'scss'),
-    dest: path.join(__dirname, 'public', 'scss'),
-    //debug: true,
-    outputStyle: 'compressed',
-    prefix: '/scss'
+  src: path.join(__dirname, 'public', 'scss'),
+  dest: path.join(__dirname, 'public', 'scss'),
+  // debug: true,
+  outputStyle: 'compressed',
+  prefix: '/scss'
 }));
 
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -54,7 +54,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(helmet({
-    frameguard: false
+  frameguard: false
 }));
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -66,7 +66,7 @@ app.use('/dashboard', dashboard);
 app.use((req, res, next) => {
   const err = new Error('Not Found');
   err.status = 404;
-  res.end("Not found!")
+  res.end('Not found!');
 });
 
 // error handler

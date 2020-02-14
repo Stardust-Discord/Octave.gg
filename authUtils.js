@@ -4,21 +4,21 @@ const credentials = require('./credentials');
 // swap to https://www.npmjs.com/package/simple-oauth2
 
 const discordAuth = new ClientOAuth2({
-    clientId: credentials.discordApp.id,
-    clientSecret: credentials.discordApp.secret,
-    accessTokenUri: 'https://discordapp.com/api/oauth2/token',
-    authorizationUri: 'https://discordapp.com/oauth2/authorize',
-    redirectUri: 'https://gnarbot.xyz/dashboard/callback',
-    scopes: ['identify', 'guilds']
+  clientId: credentials.discordApp.id,
+  clientSecret: credentials.discordApp.secret,
+  accessTokenUri: 'https://discordapp.com/api/oauth2/token',
+  authorizationUri: 'https://discordapp.com/oauth2/authorize',
+  redirectUri: 'https://gnarbot.xyz/dashboard/callback',
+  scopes: ['identify', 'guilds']
 });
 
-async function token(obj) {
-    const token = discordAuth.createToken(obj.accessToken, obj.refreshToken, obj.type);
-    if (token.expired()) {
-        return await token.refresh();
-    } else {
-        return token;
-    }
+async function token (obj) {
+  const token = discordAuth.createToken(obj.accessToken, obj.refreshToken, obj.type);
+  if (token.expired()) {
+    return token.refresh();
+  } else {
+    return token;
+  }
 }
 
 module.exports.discordAuth = discordAuth;

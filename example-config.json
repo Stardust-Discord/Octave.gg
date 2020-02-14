@@ -1,0 +1,8 @@
+{
+    "discordApp": {
+        "id": "",
+        "secret": "",
+        "redirectUri": ""
+    },
+    "sessionSecret": ""
+  }

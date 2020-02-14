@@ -1,6 +1,6 @@
 'use strict';
 
-const credentials = require('./credentials.json');
+const config = require('./config.json');
 
 const express = require('express');
 const path = require('path');
@@ -29,7 +29,7 @@ const store = new RDBStore(r, {
 app.set('trust proxy', 1);
 
 app.use(session({
-  secret: credentials.sessionSecret.toString(),
+  secret: config.sessionSecret.toString(),
   cookie: { secure: true },
   store: store,
   resave: true,

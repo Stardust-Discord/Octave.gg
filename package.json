@@ -1,26 +1,26 @@
 {
   "name": "Gnar-Web",
-  "version": "0.0.1",
-  "author": "Avarel",
+  "version": "1.0.0",
+  "author": "Dank Memer Developers",
   "private": true,
   "analyze": true,
   "scripts": {
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "body-parser": "~1.16.1",
-    "client-oauth2": "^4.1.0",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.8",
-    "express": "~4.14.1",
-    "express-session": "^1.15.3",
-    "helmet": "^3.6.1",
-    "morgan": "~1.8.2",
-    "node-sass-middleware": "~0.11.0",
-    "pug": "~2.0.0-rc.2",
-    "rethinkdbdash": "^2.3.29",
-    "serve-favicon": "~2.3.2",
-    "session-rethinkdb": "^2.0.0",
-    "superagent": "^3.5.2"
+    "body-parser": "^1.19.0",
+    "client-oauth2": "^4.2.5",
+    "cookie-parser": "^1.4.4",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "helmet": "^3.21.2",
+    "morgan": "^1.9.1",
+    "node-sass-middleware": "^0.11.0",
+    "pug": "^2.0.4",
+    "rethinkdbdash": "^2.3.31",
+    "serve-favicon": "^2.5.0",
+    "session-rethinkdb": "^2.0.1",
+    "superagent": "^5.2.1"
   }
 }

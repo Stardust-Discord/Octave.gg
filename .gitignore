@@ -3,4 +3,4 @@ node_modules/*
 
 public/scss/*.css
 
-credentials.json
+config.json

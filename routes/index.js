@@ -38,7 +38,7 @@ router.get('/', async (req, res) => {
           `&permissions=8` +
           `&guild_id=${guild.id}` +
           `&response_type=code` +
-          `&redirect_uri=http://octave.gg`,
+          `&redirect_uri=https://octave.gg`,
           icon: guild.icon
             ? `https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.jpg`
             : `/assets/img/defguild.png`

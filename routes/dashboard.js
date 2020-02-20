@@ -50,7 +50,7 @@ router.get('/showGuilds', (req, res) => {
                       `&permissions=8` +
                       `&guild_id=${item.id}` +
                       `&response_type=code` +
-                      `&redirect_uri=http://gnarbot.xyz`,
+                      `&redirect_uri=http://octave.gg`,
                 icon: `https://cdn.discordapp.com/icons/${item.id}/${item.icon}.jpg`
               };
             })

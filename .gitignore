@@ -4,3 +4,7 @@ node_modules/*
 public/scss/*.css
 
 config.json
+keys.json
+auth.json
+
+*.DS_Store

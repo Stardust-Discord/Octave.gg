@@ -1,6 +1,6 @@
-mixin msg(icon, name, msg)
+mixin msg(icon, altText, name, msg)
     .message
-        .icon: img.responsive-img(src=icon)
+        .icon: img.responsive-img(src=icon, alt=altText)
         .body
             .user-name= name
             if msg

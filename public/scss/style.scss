@@ -270,14 +270,19 @@ nav {
 
     a {
       background: #9571d3;
+      margin: 5px;
       border-radius: 5px;
       @include transition-all;
       color: white !important;
       &:hover,
       &:focus {
         color: darken(#9571d3, 10%);
-  }
+      }
     }
+  }
+
+  .canary {
+    background: #e69e36!important;
   }
 
   .row {

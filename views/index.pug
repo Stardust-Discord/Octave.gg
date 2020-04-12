@@ -8,15 +8,14 @@ block content
             ul.right.hide-on-med-and-down
                 li.super-item: a(href='https://invite.octave.gg', target='_blank')
                     | Add Octave
-                li.super-item: a(href='https://discord.gg/musicbot', target='_blank')
+                li.super-item: a(href='https://support.octave.gg', target='_blank')
                     | Support Server
                 if login
                     //li(style='height: 64px'):
                     li.super-item
                         a.dropdown-button(href='#!' data-activates='dropdown')
-                            img.discord-avatar.responsive-img(src=user.icon)
                             i.material-icons.right arrow_drop_down
-                            = user.name
+                            = user.name + '#' + user.discriminator
                         ul#dropdown.dropdown-content
                             li: a(href='#')
                                 i.material-icons.left home
@@ -34,7 +33,7 @@ block content
         li.super-item: a.page-scroll(href='https://invite.octave.gg', target='_blank')
             i.material-icons.left grade
             | Add Octave
-        li.super-item: a(href='https://invite.octave.gg', target='_blank')
+        li.super-item: a(href='https://support.octave.gg', target='_blank')
                     i.material-icons.left add_circle
                     | Support Server
         if login
@@ -60,8 +59,9 @@ block content
                                 img.main-icon.responsive-img.float(src='assets/img/logo2.png', alt='Free discord music bot, Octave\'s logo')
                                 h1 Octave
                                 h2.
-                                    The best Discord Music Bot with amazing uptime and packed with features
-                                a.btn(href='https://invite.octave.gg') Add Octave
+                                    The best Discord Music Bot with free volume control and Spotify support!
+                                a.btn(href='https://invite.octave.gg') Octave
+                                a.btn.canary(href='https://invite.octave.gg') Octave Canary
                         .hide-on-large-only.hide-on-small-and-down
                             .row.valign-wrapper
                                 .col.s12
@@ -69,8 +69,9 @@ block content
                                     div(style='margin-left: 200px')
                                         h1 Octave
                                         h2.
-                                            The best Discord Music Bot with amazing uptime and packed with features
-                                        a.btn(href='https://invite.octave.gg') Add Octave
+                                            The best Discord Music Bot with free volume control and Spotify support!
+                                        a.btn(href='https://invite.octave.gg') Octave
+                                        a.btn.canary(href='https://invite.octave.gg') Octave Canary
                                         
                 .col.m12.l9
                     include discord-mockup/mockup

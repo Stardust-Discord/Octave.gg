@@ -10,8 +10,6 @@ const authUtils = require('../authUtils');
 router.get('/callback', async (req, res) => {
   const token = await authUtils.discordAuth.code.getToken(req.originalUrl);
 
-  console.log(token);
-
   req.session.discord = {
     accessToken: token.accessToken,
     refreshToken: token.refreshToken,
@@ -35,14 +33,12 @@ router.get('/showGuilds', (req, res) => {
         }
 
         const jsa = JSON.parse(res2.text);
-        console.log(jsa);
 
         return res.render('guildsDebug', {
           guilds: jsa
             // Check for Manage Server permission
             .filter(it => (it.permissions & 0x00000020) === 0x00000020)
             .map(item => {
-              console.log(item);
               return {
                 link: `https://discordapp.com/oauth2/authorize?` +
                       `&client_id=201492375653056512` +

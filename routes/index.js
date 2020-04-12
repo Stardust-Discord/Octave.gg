@@ -23,6 +23,7 @@ router.get('/', async (req, res) => {
     login: true,
     user: {
       name: user.username,
+      discriminator: user.discriminator,
       icon: user.avatar
         ? `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.jpg`
         : `/assets/img/defguild.png`

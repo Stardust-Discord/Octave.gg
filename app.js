@@ -1,66 +1,21 @@
-'use strict';
-
 const config = require('./config.json');
 
 const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
-const logger = require('morgan');
-const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-const sass = require('node-sass-middleware');
-const helmet = require('helmet');
-
-const index = require('./routes/index');
-const dashboard = require('./routes/dashboard');
 
 const app = express();
 
-const r = require('rethinkdbdash')({
-  db: 'web'
-});
-const session = require('express-session');
-const RDBStore = require('session-rethinkdb')(session);
-
-const store = new RDBStore(r, {
-  table: 'sessions'
-});
-
 app.set('trust proxy', 1);
 
-app.use(session({
-  secret: config.sessionSecret.toString(),
-  cookie: { secure: true },
-  store: store,
-  resave: true,
-  saveUninitialized: true
-}));
-
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
-
-app.use(sass({
-  src: path.join(__dirname, 'public', 'scss'),
-  dest: path.join(__dirname, 'public', 'scss'),
-  // debug: true,
-  outputStyle: 'compressed',
-  prefix: '/scss'
-}));
-
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('tiny'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(helmet({
-  frameguard: false
-}));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
-app.use('/dashboard', dashboard);
+app.use('/', express.static(path.join(__dirname, 'public/index.html')));
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

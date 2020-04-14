@@ -1,5 +1,5 @@
 {
-  "name": "Octave-Web",
+  "name": "octaveweb",
   "version": "1.0.0",
   "author": "Dank Memer Developers",
   "private": true,
@@ -9,18 +9,7 @@
   },
   "dependencies": {
     "body-parser": "^1.19.0",
-    "client-oauth2": "^4.2.5",
-    "cookie-parser": "^1.4.4",
-    "debug": "^4.1.1",
     "express": "^4.17.1",
-    "express-session": "^1.17.0",
-    "helmet": "^3.21.2",
-    "morgan": "^1.9.1",
-    "node-sass-middleware": "^0.11.0",
-    "pug": "^2.0.4",
-    "rethinkdbdash": "^2.3.31",
-    "serve-favicon": "^2.5.0",
-    "session-rethinkdb": "^2.0.1",
-    "superagent": "^5.2.1"
+    "serve-favicon": "^2.5.0"
   }
 }

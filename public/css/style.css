@@ -131,7 +131,7 @@ img {max-width: 100%;}
 .teamMember .desc {font-size: 20px; color: #99aab5; margin: 0px 0px 25px 0px;}
 .socilLink {list-style: none;margin: 0px 0px 0px 0px; padding: 0px;}
 .socilLink li {display: inline-block; margin-right: 5px;}
-.socilLink li a {display:block; width: 26px; height: 26px; background: url(../images/social-icons.png) no-repeat 0px 0px;}
+.socilLink li a {display:block; width: 26px; height: 26px; background: url(../images/github.svg) no-repeat 0px 0px;}
 .socilLink li.rss a {background-position: -39px 0px;}
 .socilLink li.twitter a {background-position:-78px 0px;}
 .socilLink li:hover a {opacity: 0.8;}

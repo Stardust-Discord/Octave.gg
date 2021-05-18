@@ -17,7 +17,7 @@
     "helmet": "^3.21.2",
     "morgan": "^1.9.1",
     "node-sass-middleware": "^0.11.0",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "rethinkdbdash": "^2.3.31",
     "serve-favicon": "^2.5.0",
     "session-rethinkdb": "^2.0.1",
